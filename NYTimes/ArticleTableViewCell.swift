@@ -23,6 +23,7 @@ class ArticleTableViewCell: UITableViewCell {
                 }
             }
             headlineLabel.text = article.headline?.main
+            headline2Label.text = article.headline?.main
             pubDateLabel.text = article.pubDate
             typeOfMaterialLabel.text = article.typeOfMaterial?.uppercaseString
             leadParagraphLabel.text = article.leadParagraph
@@ -33,6 +34,7 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var headline2Label: UILabel!
     @IBOutlet weak var pubDateLabel: UILabel!
     @IBOutlet weak var typeOfMaterialLabel: UILabel!
     @IBOutlet weak var leadParagraphLabel: UILabel!
