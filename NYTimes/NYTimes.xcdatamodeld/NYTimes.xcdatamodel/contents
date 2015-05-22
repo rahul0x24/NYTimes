@@ -19,15 +19,14 @@
         <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Article" inverseName="headline" inverseEntity="Article" syncable="YES"/>
     </entity>
     <entity name="Multimedia" representedClassName="" syncable="YES">
-        <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="subType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subtype" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Article" inverseName="multimedia" inverseEntity="Article" syncable="YES"/>
     </entity>
     <elements>
         <element name="Article" positionX="-180" positionY="72" width="128" height="163"/>
-        <element name="Multimedia" positionX="115" positionY="8" width="128" height="118"/>
+        <element name="Multimedia" positionX="115" positionY="8" width="128" height="103"/>
         <element name="Byline" positionX="223" positionY="135" width="128" height="73"/>
         <element name="Headline" positionX="153" positionY="234" width="128" height="73"/>
     </elements>

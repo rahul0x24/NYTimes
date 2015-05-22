@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic, readonly, nullable) NSString *type;
 @property (strong, nonatomic, readonly, nullable) NSString *url;
-@property (strong, nonatomic, readonly, nullable) NSString *supType;
-@property (strong, nonatomic, readonly, nullable) NSString *caption;
+@property (strong, nonatomic, readonly, nullable) NSString *subtype;
 
 @end

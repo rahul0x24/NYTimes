@@ -56,6 +56,7 @@ class ArticlesTableViewController: UITableViewController {
             let mob = fetchedResultsController.objectAtIndexPath(indexPath!) as! NSManagedObject
             let article = MTLManagedObjectAdapter.modelOfClass(NYArticle.self, fromManagedObject: mob, error: nil) as! NYArticle
             let dvc = segue.destinationViewController as? ArticleWebViewController
+            dvc!.title = article.headline?.main
             dvc!.webURL = article.webURL
         }
         
