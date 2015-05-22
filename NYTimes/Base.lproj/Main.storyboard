@@ -170,13 +170,13 @@
                                             <exclude reference="DbJ-ld-fdw"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <exclude reference="Ksn-G7-Kdg"/>
-                                            <exclude reference="S5C-gs-08N"/>
-                                            <exclude reference="ujA-YP-ozM"/>
                                             <exclude reference="9z1-o5-Uoh"/>
                                             <exclude reference="AHN-R4-PKX"/>
                                             <exclude reference="Jsd-9X-LIZ"/>
                                             <exclude reference="SCg-t6-olL"/>
+                                            <exclude reference="Ksn-G7-Kdg"/>
+                                            <exclude reference="S5C-gs-08N"/>
+                                            <exclude reference="ujA-YP-ozM"/>
                                             <exclude reference="8oN-zs-kHU"/>
                                         </mask>
                                     </variation>
@@ -190,13 +190,13 @@
                                             <exclude reference="Bbr-zA-TLm"/>
                                         </mask>
                                         <mask key="constraints">
-                                            <include reference="Ksn-G7-Kdg"/>
-                                            <include reference="S5C-gs-08N"/>
-                                            <include reference="ujA-YP-ozM"/>
                                             <include reference="9z1-o5-Uoh"/>
                                             <include reference="AHN-R4-PKX"/>
                                             <include reference="Jsd-9X-LIZ"/>
                                             <include reference="SCg-t6-olL"/>
+                                            <include reference="Ksn-G7-Kdg"/>
+                                            <include reference="S5C-gs-08N"/>
+                                            <include reference="ujA-YP-ozM"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -220,7 +220,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="FO8-pe-5Bz"/>
                     <connections>
-                        <segue destination="ScF-0y-jwl" kind="show" id="z2f-gu-oRF"/>
+                        <segue destination="ScF-0y-jwl" kind="show" identifier="ShowImageViewController" id="z2f-gu-oRF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZqF-EK-p7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
