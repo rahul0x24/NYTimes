@@ -4,10 +4,8 @@
 
 @import Mantle;
 @import ReactiveCocoa;
+@import MDMCoreData;
+@import SDWebImage;
 
 #import "NYArticleResponse.h"
 #import "NYArticle.h"
-#import "NYMultimedia.h"
-
-#import <MDMCoreData/MDMCoreData.h>
-#import <SDWebImage/UIImageView+WebCache.h>

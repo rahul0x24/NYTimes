@@ -12,13 +12,13 @@ class ArticlesTableViewController: UITableViewController {
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
         let fetchRequest = NSFetchRequest(entityName: "Article")
-        let sortDescritor = NSSortDescriptor(key: "pubDate", ascending: true)
+        let sortDescritor = NSSortDescriptor(key: "pubDate", ascending: false)
         fetchRequest.sortDescriptors = [sortDescritor]
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataAPISyncController.persistenceController.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         frc.delegate = self
         return frc
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,7 +60,6 @@ class ArticlesTableViewController: UITableViewController {
             dvc!.webURL = article.webURL
         }
         
-        
     }
 
 
@@ -92,6 +91,7 @@ extension ArticlesTableViewController : UITableViewDataSource {
     func configureCell(cell: UITableViewCell, withObject object: NSManagedObject) {
         if let cell = cell as? ArticleTableViewCell {
             let article = MTLManagedObjectAdapter.modelOfClass(NYArticle.self, fromManagedObject: object, error: nil) as! NYArticle
+            cell.articleImageView.image = nil
             cell.article = article
         }
     }

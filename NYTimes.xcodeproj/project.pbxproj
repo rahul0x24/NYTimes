@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18EB84FF02D9989310BEF7CD /* libPods-NYTimes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACC2AD00590020E729AF11E /* libPods-NYTimes.a */; };
 		351C4FA81B0CE9AB0026934E /* NYSerivceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C4FA71B0CE9AB0026934E /* NYSerivceApi.swift */; };
 		351C4FAF1B0CF2F10026934E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FAB1B0CF2F10026934E /* Alamofire.framework */; };
 		351C4FB01B0CF2F10026934E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FAC1B0CF2F10026934E /* Box.framework */; };
@@ -31,6 +30,7 @@
 		35374EBE1B0CE7C300899699 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35374EBD1B0CE7C300899699 /* Images.xcassets */; };
 		35374EC11B0CE7C300899699 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35374EBF1B0CE7C300899699 /* LaunchScreen.xib */; };
 		35374ECD1B0CE7C300899699 /* NYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35374ECC1B0CE7C300899699 /* NYTimesTests.swift */; };
+		7A16A147085DEA71E402499A /* Pods_NYTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,8 @@
 		35374ECB1B0CE7C300899699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35374ECC1B0CE7C300899699 /* NYTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesTests.swift; sourceTree = "<group>"; };
 		51AB06CEF6B8C602370468E0 /* Pods-NYTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes.release.xcconfig"; sourceTree = "<group>"; };
-		5ACC2AD00590020E729AF11E /* libPods-NYTimes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYTimes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4FD8F8943A2F784411C051 /* Pods-NYTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes.debug.xcconfig"; sourceTree = "<group>"; };
+		A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				351C4FB01B0CF2F10026934E /* Box.framework in Frameworks */,
 				351C4FB11B0CF2F10026934E /* ReactiveCocoa.framework in Frameworks */,
 				351C4FB21B0CF2F10026934E /* Result.framework in Frameworks */,
-				18EB84FF02D9989310BEF7CD /* libPods-NYTimes.a in Frameworks */,
+				7A16A147085DEA71E402499A /* Pods_NYTimes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +223,7 @@
 				351C4FAC1B0CF2F10026934E /* Box.framework */,
 				351C4FAD1B0CF2F10026934E /* ReactiveCocoa.framework */,
 				351C4FAE1B0CF2F10026934E /* Result.framework */,
-				5ACC2AD00590020E729AF11E /* libPods-NYTimes.a */,
+				A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,6 +241,7 @@
 				35374EAC1B0CE7C300899699 /* Resources */,
 				B829092CB3D929D803371A30 /* Copy Pods Resources */,
 				351C4FAA1B0CEDD90026934E /* Copy Carthage Resources */,
+				BA91FC51131BA6BA8AEBBA2D /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +375,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA91FC51131BA6BA8AEBBA2D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
