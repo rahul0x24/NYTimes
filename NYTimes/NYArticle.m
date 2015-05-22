@@ -8,7 +8,7 @@
 
 #import "NYArticle.h"
 
-@interface NYArticle () <MTLJSONSerializing, MTLManagedObjectSerializing>
+@interface NYArticle ()
 
 @end
 
@@ -21,7 +21,6 @@
              @"webURL": @"web_url",
              @"leadParagraph": @"lead_paragraph",
              @"typeOfMaterial": @"type_of_material",
-             @"byline": @"byline.original",
              @"articleId": @"_id",
              @"pubDate": @"pub_date"
              };

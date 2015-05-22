@@ -13,7 +13,7 @@ typedef enum : NSUInteger {
     NYResponseStatusFailure
 } NYResponseStatus;
 
-@interface NYArticleResponse : MTLModel
+@interface NYArticleResponse : MTLModel <MTLJSONSerializing>
 
 @property (strong, nonatomic, readonly) NSArray *docs;
 @property (nonatomic, readonly) NYResponseStatus status;

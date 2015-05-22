@@ -8,7 +8,7 @@
 
 #import "NYMultimedia.h"
 
-@interface NYMultimedia () <MTLJSONSerializing, MTLManagedObjectSerializing>
+@interface NYMultimedia ()
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import <Mantle/Mantle.h>
 
-@interface NYByline : MTLModel
+@interface NYByline : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @property (strong, nonatomic, readonly, nullable) NSString *original;
 

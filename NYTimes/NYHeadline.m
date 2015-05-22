@@ -8,7 +8,7 @@
 
 #import "NYHeadline.h"
 
-@interface NYHeadline () <MTLJSONSerializing, MTLManagedObjectSerializing>
+@interface NYHeadline ()
 
 @end
 

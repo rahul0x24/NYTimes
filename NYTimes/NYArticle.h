@@ -12,13 +12,13 @@
 #import "NYHeadline.h"
 #import "NYMultimedia.h"
 
-@interface NYArticle : MTLModel
+@interface NYArticle : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @property (strong, nonatomic, readonly, nullable) NSURL *webURL;
 @property (strong, nonatomic, readonly, nullable) NSString *leadParagraph;
-@property (strong, nonatomic, readonly, nullable) NSArray *multimedia;
-@property (strong, nonatomic, readonly, nullable) NSString *byline;
-@property (strong, nonatomic, nullable) NYHeadline *headline;
+@property (strong, nonatomic, readonly, nullable) NSSet *multimedia;
+@property (strong, nonatomic, readonly, nullable) NYByline *byline;
+@property (strong, nonatomic, readonly, nullable) NYHeadline *headline;
 @property (strong, nonatomic, readonly, nullable) NSString *typeOfMaterial;
 @property (strong, nonatomic, readonly, nullable) NSString *articleId;
 @property (strong, nonatomic, readonly, nullable) NSString *pubDate;

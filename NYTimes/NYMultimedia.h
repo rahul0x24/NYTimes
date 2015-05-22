@@ -8,7 +8,7 @@
 
 @import Mantle;
 
-@interface NYMultimedia : MTLModel
+@interface NYMultimedia : MTLModel <MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @property (strong, nonatomic, readonly, nullable) NSString *type;
 @property (strong, nonatomic, readonly, nullable) NSString *url;

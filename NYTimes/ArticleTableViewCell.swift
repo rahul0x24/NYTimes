@@ -17,7 +17,7 @@ class ArticleTableViewCell: UITableViewCell {
             pubDateLabel.text = article.pubDate
             typeOfMaterialLabel.text = article.typeOfMaterial
             leadParagraphLabel.text = article.leadParagraph
-            bylineLabel.text = article.byline
+            bylineLabel.text = article.byline?.original
         }
     }
 

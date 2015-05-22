@@ -9,7 +9,7 @@
 #import "NYArticleResponse.h"
 #import "NYArticle.h"
 
-@interface NYArticleResponse () <MTLJSONSerializing>
+@interface NYArticleResponse ()
 
 @end
 

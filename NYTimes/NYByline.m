@@ -8,7 +8,7 @@
 
 #import "NYByline.h"
 
-@interface NYByline () <MTLJSONSerializing, MTLManagedObjectSerializing>
+@interface NYByline ()
 
 @end
 
