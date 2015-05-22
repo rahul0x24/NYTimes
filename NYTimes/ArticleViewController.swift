@@ -17,7 +17,6 @@ class ArticleViewController: UIViewController {
     @IBOutlet weak var pubDate: UILabel!
     @IBOutlet weak var typeOfMaterial: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var readMoreButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,13 +8,21 @@
 
 #import "NYByline.h"
 
-@interface NYByline () <MTLJSONSerializing>
+@interface NYByline () <MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @end
 
 @implementation NYByline
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{};
+}
+
++(NSString *)managedObjectEntityName {
+    return @"Byline";
+}
+
++(NSDictionary *)managedObjectKeysByPropertyKey {
     return @{};
 }
 

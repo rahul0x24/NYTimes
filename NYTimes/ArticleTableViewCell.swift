@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class ArticleTableViewCell: UITableViewCell {
+    
+    var article: NYArticle! {
+        didSet {
+            headlineLabel.text = article.headline?.main
+            pubDateLabel.text = article.pubDate
+            typeOfMaterialLabel.text = article.typeOfMaterial
+            leadParagraphLabel.text = article.leadParagraph
+            bylineLabel.text = article.byline
+        }
+    }
 
+    @IBOutlet weak var articleImageView: UIImageView!
+    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var pubDateLabel: UILabel!
+    @IBOutlet weak var typeOfMaterialLabel: UILabel!
+    @IBOutlet weak var leadParagraphLabel: UILabel!
+    @IBOutlet weak var bylineLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

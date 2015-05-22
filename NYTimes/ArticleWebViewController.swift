@@ -10,7 +10,7 @@ import UIKit
 
 class ArticleWebViewController: UIViewController {
 
-    var webURL: String!
+    var webURL: NSURL?
     
     @IBOutlet weak var webView: UIWebView!
     
@@ -18,9 +18,11 @@ class ArticleWebViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var url = NSURL(string: webURL)
-        var request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
+        if let webURL = webURL {
+            var request = NSURLRequest(URL: webURL)
+            webView.loadRequest(request)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

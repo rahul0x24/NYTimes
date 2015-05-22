@@ -20,7 +20,7 @@ class NYSerivceApi: NSObject {
             let url = baseURL + articlesURL
             let params = [
                 "api-key" : APIKey,
-                "fl" : "web_url,lead_paragraph,multimedia,byline,type_of_material,_id,pub_date"
+                "fl" : "web_url,lead_paragraph,multimedia,byline,type_of_material,_id,pub_date,headline"
             ]
             
             let request = Alamofire.request(.GET, url, parameters: params)

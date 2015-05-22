@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Article" syncable="YES">
+    <entity name="Article" representedClassName="" syncable="YES">
         <attribute name="articleId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="byline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="leadParagraph" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pubDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="typeOfMaterial" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="webURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="byline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Byline" inverseName="article" inverseEntity="Byline" syncable="YES"/>
+        <relationship name="headline" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Headline" inverseName="article" inverseEntity="Headline" syncable="YES"/>
         <relationship name="multimedia" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Multimedia" inverseName="article" inverseEntity="Multimedia" syncable="YES"/>
     </entity>
-    <entity name="Multimedia" syncable="YES">
+    <entity name="Byline" representedClassName="" syncable="YES">
+        <attribute name="original" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Article" inverseName="byline" inverseEntity="Article" syncable="YES"/>
+    </entity>
+    <entity name="Headline" representedClassName="" syncable="YES">
+        <attribute name="main" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Article" inverseName="headline" inverseEntity="Article" syncable="YES"/>
+    </entity>
+    <entity name="Multimedia" representedClassName="" syncable="YES">
         <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,7 +26,9 @@
         <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Article" inverseName="multimedia" inverseEntity="Article" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Article" positionX="-81" positionY="-9" width="128" height="148"/>
+        <element name="Article" positionX="-180" positionY="72" width="128" height="163"/>
         <element name="Multimedia" positionX="115" positionY="8" width="128" height="118"/>
+        <element name="Byline" positionX="223" positionY="135" width="128" height="73"/>
+        <element name="Headline" positionX="153" positionY="234" width="128" height="73"/>
     </elements>
 </model>

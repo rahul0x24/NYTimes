@@ -10,6 +10,6 @@
 
 @interface NYByline : MTLModel
 
-@property (strong, nonatomic, readonly) NSString *original;
+@property (strong, nonatomic, readonly, nullable) NSString *original;
 
 @end

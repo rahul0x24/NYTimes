@@ -28,6 +28,8 @@ class ArticlesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        title = "Articles"
+        
         CoreDataAPISyncController.syncArticles()
         
         var error: NSError? = nil
@@ -42,15 +44,24 @@ class ArticlesTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowArticleWebViewController" {
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            let mob = fetchedResultsController.objectAtIndexPath(indexPath!) as! NSManagedObject
+            let article = MTLManagedObjectAdapter.modelOfClass(NYArticle.self, fromManagedObject: mob, error: nil) as! NYArticle
+            let dvc = segue.destinationViewController as? ArticleWebViewController
+            dvc!.webURL = article.webURL
+        }
+        
+        
     }
-    */
+
 
 }
 
@@ -67,7 +78,7 @@ extension ArticlesTableViewController : UITableViewDataSource {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("articleCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("articleCell", forIndexPath: indexPath) as! ArticleTableViewCell
         
         // Configure the cell...
         let mob = fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
@@ -78,8 +89,10 @@ extension ArticlesTableViewController : UITableViewDataSource {
     }
     
     func configureCell(cell: UITableViewCell, withObject object: NSManagedObject) {
-        let article = MTLManagedObjectAdapter.modelOfClass(NYArticle.self, fromManagedObject: object, error: nil) as! NYArticle
-        cell.textLabel?.text = article.articleId
+        if let cell = cell as? ArticleTableViewCell {
+            let article = MTLManagedObjectAdapter.modelOfClass(NYArticle.self, fromManagedObject: object, error: nil) as! NYArticle
+            cell.article = article
+        }
     }
 }
 

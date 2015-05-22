@@ -8,16 +8,19 @@
 
 @import Mantle;
 
-@class NYByline;
+#import "NYByline.h"
+#import "NYHeadline.h"
+#import "NYMultimedia.h"
 
 @interface NYArticle : MTLModel
 
-@property (strong, nonatomic, readonly) NSURL *webURL;
-@property (strong, nonatomic, readonly) NSString *leadParagraph;
-@property (strong, nonatomic, readonly) NSArray *multimedia;
-@property (strong, nonatomic, readonly) NYByline *byline;
-@property (strong, nonatomic, readonly) NSString *typeOfMaterial;
-@property (strong, nonatomic, readonly) NSString *articleId;
-@property (strong, nonatomic, readonly) NSString *pubDate;
+@property (strong, nonatomic, readonly, nullable) NSURL *webURL;
+@property (strong, nonatomic, readonly, nullable) NSString *leadParagraph;
+@property (strong, nonatomic, readonly, nullable) NSArray *multimedia;
+@property (strong, nonatomic, readonly, nullable) NSString *byline;
+@property (strong, nonatomic, nullable) NYHeadline *headline;
+@property (strong, nonatomic, readonly, nullable) NSString *typeOfMaterial;
+@property (strong, nonatomic, readonly, nullable) NSString *articleId;
+@property (strong, nonatomic, readonly, nullable) NSString *pubDate;
 
 @end

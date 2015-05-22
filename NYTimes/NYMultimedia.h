@@ -10,9 +10,9 @@
 
 @interface NYMultimedia : MTLModel
 
-@property (strong, nonatomic) NSString *type;
-@property (strong, nonatomic) NSString *url;
-@property (strong, nonatomic) NSString *supType;
-@property (strong, nonatomic) NSString *caption;
+@property (strong, nonatomic, readonly, nullable) NSString *type;
+@property (strong, nonatomic, readonly, nullable) NSString *url;
+@property (strong, nonatomic, readonly, nullable) NSString *supType;
+@property (strong, nonatomic, readonly, nullable) NSString *caption;
 
 @end

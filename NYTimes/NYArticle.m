@@ -7,8 +7,6 @@
 //
 
 #import "NYArticle.h"
-#import "NYMultimedia.h"
-#import "NYByline.h"
 
 @interface NYArticle () <MTLJSONSerializing, MTLManagedObjectSerializing>
 
@@ -23,6 +21,7 @@
              @"webURL": @"web_url",
              @"leadParagraph": @"lead_paragraph",
              @"typeOfMaterial": @"type_of_material",
+             @"byline": @"byline.original",
              @"articleId": @"_id",
              @"pubDate": @"pub_date"
              };
@@ -42,24 +41,31 @@
     return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[NYByline class]];
 }
 
++ (NSValueTransformer *)headlineJSONTransformer
+{
+    return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[NYHeadline class]];
+}
+
 #pragma mark - MTLManagedObjectSerializing
+
 + (NSString *)managedObjectEntityName {
     return @"Article";
 }
 
 + (NSDictionary *)managedObjectKeysByPropertyKey {
-    return @{
-             @"multimedia": [NSNull null],
-             @"byline": [NSNull null]
-             };
+    return @{};
 }
 
 + (NSValueTransformer *)webURLEntityAttributeTransformer {
     return [[NSValueTransformer valueTransformerForName:MTLURLValueTransformerName] mtl_invertedTransformer];
 }
 
-+ (NSValueTransformer *)multimediaEntityAttributeTransformer {
-    return [[NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[NYMultimedia class]] mtl_invertedTransformer];
++ (NSDictionary *)relationshipModelClassesByPropertyKey {
+    return @{
+             @"byline" : [NYByline class],
+             @"headline" : [NYHeadline class],
+             @"multimedia" : [NYMultimedia class]
+             };
 }
 
 + (NSSet *)propertyKeysForManagedObjectUniquing {
