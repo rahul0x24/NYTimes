@@ -47,6 +47,7 @@ class ArticleViewController: UIViewController {
         var tapGR = UITapGestureRecognizer(target: self, action: "showImage")
         imageView.userInteractionEnabled = true
         imageView.addGestureRecognizer(tapGR);
+        
     }
     
     func showImage() {
@@ -67,12 +68,10 @@ class ArticleViewController: UIViewController {
         } else if segue.identifier == "ShowArticleImageViewController" {
             let dvc = segue.destinationViewController as? ArticleImageViewController
             dvc!.title = article.headline?.main
-            dvc!.image = sender as? UIImage
+            dvc?.image = sender as? UIImage
+            dvc!.transitioningDelegate = self
         }
-        
     }
-
-
 }
 
 extension ArticleViewController : UIViewControllerTransitioningDelegate {

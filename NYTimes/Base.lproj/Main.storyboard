@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="-277" y="510"/>
         </scene>
-        <!--Article Image View Controller-->
+        <!--Image-->
         <scene sceneID="Z39-uX-v0E">
             <objects>
-                <viewController id="ScF-0y-jwl" customClass="ArticleImageViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleImageViewController" title="Image" id="ScF-0y-jwl" customClass="ArticleImageViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MVG-H8-NyB"/>
                         <viewControllerLayoutGuide type="bottom" id="nf8-Ao-np8"/>
@@ -273,7 +273,7 @@
         <!--Article View Controller-->
         <scene sceneID="GE2-ja-5gY">
             <objects>
-                <viewController id="UgE-Vj-zoR" customClass="ArticleViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="UgE-Vj-zoR" customClass="ArticleViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qni-xO-PEJ"/>
                         <viewControllerLayoutGuide type="bottom" id="i7Z-Dh-I9M"/>
@@ -285,12 +285,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lj-nX-h5d">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3s-dQ-qAK">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="zyb-5i-6W1"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ml-QB-wJi">
                                         <rect key="frame" x="8" y="258" width="576" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -309,6 +303,12 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3s-dQ-qAK">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="zyb-5i-6W1"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4z2-2w-fCI" firstAttribute="leading" secondItem="4ml-QB-wJi" secondAttribute="leading" id="7wh-WC-uoU"/>
@@ -369,12 +369,12 @@
                         <outlet property="byline" destination="4z2-2w-fCI" id="JJC-Xv-eJt"/>
                         <outlet property="imageView" destination="R3s-dQ-qAK" id="rXb-ei-29H"/>
                         <outlet property="leadParagraph" destination="QRu-ow-k0F" id="04f-cl-UJj"/>
-                        <segue destination="ScF-0y-jwl" kind="presentation" identifier="ShowArticleImageViewController" id="K7d-pw-NBf"/>
+                        <segue destination="ScF-0y-jwl" kind="presentation" identifier="ShowArticleImageViewController" id="r01-wy-6oR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPo-ei-upG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="510"/>
+            <point key="canvasLocation" x="491" y="544"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zHV-Go-hfb">

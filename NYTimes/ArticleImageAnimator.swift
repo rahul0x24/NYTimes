@@ -33,11 +33,40 @@ class ArticleImageAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func animateShowTranistion(transitionContext: UIViewControllerContextTransitioning) {
+        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         
+        let duration = transitionDuration(transitionContext)
+        let initialFrame = imageView.frame
+        let finalFrame = transitionContext.finalFrameForViewController(toViewController!)
+
+        transitionContext.containerView().addSubview(toViewController!.view)
+        
+        toViewController!.view.alpha = 0
+        
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            self.imageView.frame = finalFrame
+        }) { (completed) -> Void in
+            toViewController!.view.alpha = 1
+            self.imageView.frame = initialFrame
+            transitionContext.completeTransition(true)
+        }
+    
     }
     
     func animateHideTransition(transitionContext: UIViewControllerContextTransitioning) {
-    
+        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+        
+        let duration = transitionDuration(transitionContext)
+        transitionContext.containerView().addSubview(toViewController!.view)
+        toViewController!.view.alpha = 0
+        
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            toViewController!.view.alpha = 1
+        }) { (completed) -> Void in
+            transitionContext.completeTransition(true)
+        }
     }
    
 }
