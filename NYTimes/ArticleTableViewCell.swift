@@ -17,7 +17,7 @@ class ArticleTableViewCell: UITableViewCell {
             if let multimedia = article.multimedia as? Set<NYMultimedia> {
                 for m in multimedia {
                     if m.type == "image" && m.subtype?.rangeOfString("large") != nil {
-                        articleImageView.sd_setImageWithURL(NSURL(string: "http://static01.nyt.com/"+m.url!), placeholderImage: nil)
+                        articleImageView.sd_setImageWithURL(NSURL(string: "http://static01.nyt.com/"+m.url!))
                         break
                     }
                 }
@@ -46,6 +46,7 @@ class ArticleTableViewCell: UITableViewCell {
         
         let rc = randomColor(hue: .Random, luminosity: .Dark)
         blurView.backgroundColor = rc.colorWithAlphaComponent(0.5)
+        articleImageView.image = UIImage(named: "placeholder")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

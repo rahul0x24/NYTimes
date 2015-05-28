@@ -30,6 +30,7 @@
 		35374EBE1B0CE7C300899699 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35374EBD1B0CE7C300899699 /* Images.xcassets */; };
 		35374EC11B0CE7C300899699 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35374EBF1B0CE7C300899699 /* LaunchScreen.xib */; };
 		35374ECD1B0CE7C300899699 /* NYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35374ECC1B0CE7C300899699 /* NYTimesTests.swift */; };
+		35BB9BC01B16EBD400A06E50 /* ArticleImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB9BBF1B16EBD400A06E50 /* ArticleImageAnimator.swift */; };
 		7A16A147085DEA71E402499A /* Pods_NYTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		35374EC61B0CE7C300899699 /* NYTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35374ECB1B0CE7C300899699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35374ECC1B0CE7C300899699 /* NYTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesTests.swift; sourceTree = "<group>"; };
+		35BB9BBF1B16EBD400A06E50 /* ArticleImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleImageAnimator.swift; sourceTree = "<group>"; };
 		51AB06CEF6B8C602370468E0 /* Pods-NYTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes.release.xcconfig"; sourceTree = "<group>"; };
 		7F4FD8F8943A2F784411C051 /* Pods-NYTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes.debug.xcconfig"; sourceTree = "<group>"; };
 		A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				351C4FBB1B0CF62C0026934E /* ArticleViewController.swift */,
 				351C4FBD1B0CF6350026934E /* ArticleWebViewController.swift */,
 				351C4FBF1B0CF6440026934E /* ArticleImageViewController.swift */,
+				35BB9BBF1B16EBD400A06E50 /* ArticleImageAnimator.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				351C4FBE1B0CF6350026934E /* ArticleWebViewController.swift in Sources */,
 				3526D3121B0EE1D400E1762B /* NYHeadline.m in Sources */,
 				351C4FC01B0CF6440026934E /* ArticleImageViewController.swift in Sources */,
+				35BB9BC01B16EBD400A06E50 /* ArticleImageAnimator.swift in Sources */,
 				351C4FA81B0CE9AB0026934E /* NYSerivceApi.swift in Sources */,
 				351C4FD01B0CFB090026934E /* NYArticleResponse.m in Sources */,
 			);

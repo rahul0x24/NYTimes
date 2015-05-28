@@ -51,18 +51,14 @@ class ArticlesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        if segue.identifier == "ShowArticleWebViewController" {
+        if segue.identifier == "ShowArticleViewController" {
             let indexPath = self.tableView.indexPathForSelectedRow()
             let mob = fetchedResultsController.objectAtIndexPath(indexPath!) as! NSManagedObject
             let article = MTLManagedObjectAdapter.modelOfClass(NYArticle.self, fromManagedObject: mob, error: nil) as! NYArticle
-            let dvc = segue.destinationViewController as? ArticleWebViewController
-            dvc!.title = article.headline?.main
-            dvc!.webURL = article.webURL
+            let dvc = segue.destinationViewController as? ArticleViewController
+            dvc!.article = article
         }
-        
     }
-
-
 }
 
 extension ArticlesTableViewController : UITableViewDataSource {
