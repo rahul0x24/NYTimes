@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		351C4FA81B0CE9AB0026934E /* NYSerivceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C4FA71B0CE9AB0026934E /* NYSerivceApi.swift */; };
-		351C4FAF1B0CF2F10026934E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FAB1B0CF2F10026934E /* Alamofire.framework */; };
-		351C4FB01B0CF2F10026934E /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FAC1B0CF2F10026934E /* Box.framework */; };
-		351C4FB11B0CF2F10026934E /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FAD1B0CF2F10026934E /* ReactiveCocoa.framework */; };
-		351C4FB21B0CF2F10026934E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FAE1B0CF2F10026934E /* Result.framework */; };
-		351C4FB41B0CF56A0026934E /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C4FB31B0CF56A0026934E /* Mantle.framework */; };
 		351C4FBA1B0CF6020026934E /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C4FB91B0CF6020026934E /* ArticlesTableViewController.swift */; };
 		351C4FBC1B0CF62C0026934E /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C4FBB1B0CF62C0026934E /* ArticleViewController.swift */; };
 		351C4FBE1B0CF6350026934E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C4FBD1B0CF6350026934E /* ArticleWebViewController.swift */; };
@@ -31,6 +26,16 @@
 		35374EC11B0CE7C300899699 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35374EBF1B0CE7C300899699 /* LaunchScreen.xib */; };
 		35374ECD1B0CE7C300899699 /* NYTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35374ECC1B0CE7C300899699 /* NYTimesTests.swift */; };
 		35BB9BC01B16EBD400A06E50 /* ArticleImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BB9BBF1B16EBD400A06E50 /* ArticleImageAnimator.swift */; };
+		35C60CFB1B1DEEF700C53FDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF11B1DEEAB00C53FDD /* Alamofire.framework */; };
+		35C60CFC1B1DEEF700C53FDD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF11B1DEEAB00C53FDD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35C60CFD1B1DEEF800C53FDD /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF21B1DEEAB00C53FDD /* Box.framework */; };
+		35C60CFE1B1DEEF800C53FDD /* Box.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF21B1DEEAB00C53FDD /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35C60CFF1B1DEEF800C53FDD /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF31B1DEEAB00C53FDD /* Mantle.framework */; };
+		35C60D001B1DEEF800C53FDD /* Mantle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF31B1DEEAB00C53FDD /* Mantle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35C60D011B1DEEF800C53FDD /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF41B1DEEAB00C53FDD /* ReactiveCocoa.framework */; };
+		35C60D021B1DEEF800C53FDD /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF41B1DEEAB00C53FDD /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35C60D031B1DEEF800C53FDD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF51B1DEEAB00C53FDD /* Result.framework */; };
+		35C60D041B1DEEF800C53FDD /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35C60CF51B1DEEAB00C53FDD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A16A147085DEA71E402499A /* Pods_NYTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,13 +49,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		35C60D051B1DEEF800C53FDD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35C60CFE1B1DEEF800C53FDD /* Box.framework in Embed Frameworks */,
+				35C60CFC1B1DEEF700C53FDD /* Alamofire.framework in Embed Frameworks */,
+				35C60D041B1DEEF800C53FDD /* Result.framework in Embed Frameworks */,
+				35C60D001B1DEEF800C53FDD /* Mantle.framework in Embed Frameworks */,
+				35C60D021B1DEEF800C53FDD /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		351C4FA71B0CE9AB0026934E /* NYSerivceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYSerivceApi.swift; sourceTree = "<group>"; };
-		351C4FAB1B0CF2F10026934E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		351C4FAC1B0CF2F10026934E /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
-		351C4FAD1B0CF2F10026934E /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		351C4FAE1B0CF2F10026934E /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		351C4FB31B0CF56A0026934E /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = Carthage/Build/iOS/Mantle.framework; sourceTree = "<group>"; };
 		351C4FB51B0CF5950026934E /* NYTimes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYTimes-Bridging-Header.h"; sourceTree = "<group>"; };
 		351C4FB91B0CF6020026934E /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 		351C4FBB1B0CF62C0026934E /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +97,11 @@
 		35374ECB1B0CE7C300899699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35374ECC1B0CE7C300899699 /* NYTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesTests.swift; sourceTree = "<group>"; };
 		35BB9BBF1B16EBD400A06E50 /* ArticleImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleImageAnimator.swift; sourceTree = "<group>"; };
+		35C60CF11B1DEEAB00C53FDD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Frameworks/Alamofire.framework; sourceTree = "<group>"; };
+		35C60CF21B1DEEAB00C53FDD /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Frameworks/Box.framework; sourceTree = "<group>"; };
+		35C60CF31B1DEEAB00C53FDD /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = Frameworks/Mantle.framework; sourceTree = "<group>"; };
+		35C60CF41B1DEEAB00C53FDD /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Frameworks/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		35C60CF51B1DEEAB00C53FDD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Frameworks/Result.framework; sourceTree = "<group>"; };
 		51AB06CEF6B8C602370468E0 /* Pods-NYTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes.release.xcconfig"; sourceTree = "<group>"; };
 		7F4FD8F8943A2F784411C051 /* Pods-NYTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYTimes/Pods-NYTimes.debug.xcconfig"; sourceTree = "<group>"; };
 		A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYTimes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,12 +112,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				351C4FB41B0CF56A0026934E /* Mantle.framework in Frameworks */,
-				351C4FAF1B0CF2F10026934E /* Alamofire.framework in Frameworks */,
-				351C4FB01B0CF2F10026934E /* Box.framework in Frameworks */,
-				351C4FB11B0CF2F10026934E /* ReactiveCocoa.framework in Frameworks */,
-				351C4FB21B0CF2F10026934E /* Result.framework in Frameworks */,
 				7A16A147085DEA71E402499A /* Pods_NYTimes.framework in Frameworks */,
+				35C60CFF1B1DEEF800C53FDD /* Mantle.framework in Frameworks */,
+				35C60CFD1B1DEEF800C53FDD /* Box.framework in Frameworks */,
+				35C60D031B1DEEF800C53FDD /* Result.framework in Frameworks */,
+				35C60CFB1B1DEEF700C53FDD /* Alamofire.framework in Frameworks */,
+				35C60D011B1DEEF800C53FDD /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,11 +244,11 @@
 		EB0C0E61C27265D8EF3CFE5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				351C4FB31B0CF56A0026934E /* Mantle.framework */,
-				351C4FAB1B0CF2F10026934E /* Alamofire.framework */,
-				351C4FAC1B0CF2F10026934E /* Box.framework */,
-				351C4FAD1B0CF2F10026934E /* ReactiveCocoa.framework */,
-				351C4FAE1B0CF2F10026934E /* Result.framework */,
+				35C60CF11B1DEEAB00C53FDD /* Alamofire.framework */,
+				35C60CF21B1DEEAB00C53FDD /* Box.framework */,
+				35C60CF31B1DEEAB00C53FDD /* Mantle.framework */,
+				35C60CF41B1DEEAB00C53FDD /* ReactiveCocoa.framework */,
+				35C60CF51B1DEEAB00C53FDD /* Result.framework */,
 				A1518446E5EC9BD8F4F34113 /* Pods_NYTimes.framework */,
 			);
 			name = Frameworks;
@@ -243,8 +266,8 @@
 				35374EAB1B0CE7C300899699 /* Frameworks */,
 				35374EAC1B0CE7C300899699 /* Resources */,
 				B829092CB3D929D803371A30 /* Copy Pods Resources */,
-				351C4FAA1B0CEDD90026934E /* Copy Carthage Resources */,
 				BA91FC51131BA6BA8AEBBA2D /* Embed Pods Frameworks */,
+				35C60D051B1DEEF800C53FDD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,25 +354,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		351C4FAA1B0CEDD90026934E /* Copy Carthage Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Mantle.framework",
-			);
-			name = "Copy Carthage Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		7F84FDF84F94125D81B36D57 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,6 +554,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = NYTimes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -568,6 +573,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = NYTimes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
