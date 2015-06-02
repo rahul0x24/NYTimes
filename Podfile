@@ -7,8 +7,6 @@ target 'NYTimes' do
 pod 'SDWebImage', '3.7.2'
 pod 'MDMCoreData', '1.5.0'
 pod 'RandomColorSwift', '0.0.1'
-pod 'Alamofire', '~> 1.2'
-pod 'Mantle'
 
 end
 
